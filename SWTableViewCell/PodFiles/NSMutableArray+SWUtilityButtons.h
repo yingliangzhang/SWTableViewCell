@@ -10,6 +10,7 @@
 
 @interface NSMutableArray (SWUtilityButtons)
 
+- (void)sw_addUtilityButtonWithNuiClass:(NSString *)nuiClass title:(NSString *)title;
 - (void)sw_addUtilityButtonWithColor:(UIColor *)color title:(NSString *)title;
 - (void)sw_addUtilityButtonWithColor:(UIColor *)color attributedTitle:(NSAttributedString *)title;
 - (void)sw_addUtilityButtonWithColor:(UIColor *)color icon:(UIImage *)icon;

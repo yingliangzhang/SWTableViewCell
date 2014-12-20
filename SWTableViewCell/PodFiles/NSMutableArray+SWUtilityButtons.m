@@ -7,8 +7,20 @@
 //
 
 #import "NSMutableArray+SWUtilityButtons.h"
+#import "NUIButtonRenderer.h"
 
 @implementation NSMutableArray (SWUtilityButtons)
+
+- (void)sw_addUtilityButtonWithNuiClass:(NSString *)nuiClass title:(NSString *)title
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.nuiClass = nuiClass;
+    button.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [button.titleLabel setAdjustsFontSizeToFitWidth:YES];
+    [self addObject:button];
+}
 
 - (void)sw_addUtilityButtonWithColor:(UIColor *)color title:(NSString *)title
 {
